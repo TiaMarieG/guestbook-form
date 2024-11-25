@@ -1,0 +1,132 @@
+<!--
+Name: Tia Marie Gordon
+Date: 10/9/2024
+Assignment: Project Portfolio - Guestbook Form
+Class: SDEV 305
+-->
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Guestbook Form</title>
+
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="scripts/guestbook.js" defer></script>
+    <link rel="icon" type="image/jpg" href="images/guestbook-favicon.jpg">
+</head>
+
+<body>
+    <div class="container">
+
+        <header class="header">
+            <h1>Contact Form</h1>
+        </header>
+
+
+        <main>
+            <form id="user-info" method="post" action="thank-you">
+                <div id="generic-info-container">
+                    <div class="user-info-div">
+                        <label for="fname" id="fname-label">First Name
+                            <span id="err-fname" class="err">- Please enter a first name</span>
+                        </label>
+                        <input type="text" name="fName" id="fname">
+                    </div>
+
+                    <div class="user-info-div">
+                        <label for="lname">Last Name
+                            <span id="err-lname" class="err">- Please enter a last name</span>
+                        </label>
+                        <input type="text" name="lName" id="lname">
+                    </div>
+
+                    <div class="user-info-div">
+                        <label for="job-title">Job Title</label>
+                        <input type="text" name="job_title" id="job-title">
+                    </div>
+
+                    <div class="user-info-div">
+                        <label for="company">Company
+                        </label>
+                        <input type="text" name="company" id="company">
+                    </div>
+
+                    <div class="user-info-div">
+                        <label for="linkedin-url">LinkedIn URL
+                            <span id="err-url" class="err">- URL must start with: https://linkedin.com/in/</span>
+                        </label>
+                        <input type="url" name="linkedin_url" id="linkedin-url">
+                    </div>
+
+                    <div class="user-info-div">
+                        <label for="email">Email Address
+                            <span id="err-address" class="err"> Email must contain an '@'' and '.'</span>
+                            <span id="err-address-selected" class="err">- Please enter an email address</span>
+                        </label>
+                        <input type="email" name="email" id="email">
+                    </div>
+                </div>
+
+                <div id="meeting-container">
+                    <div class="meet-div">
+                        <legend>How did we meet?
+                            <span id="err-meet" class="err">- Please select an option</span>
+                        </legend>
+                        <select name="meet" id="meet">
+                            <option value="none">Please select</option>
+                            <option value="job-fair">Job Fair</option>
+                            <option value="boardmasters">Boardmasters</option>
+                            <option value="tech-meet">Tech Meetup</option>
+                            <option value="other">Other</option>
+                        </select>
+                    </div>
+
+                    <div class="meet-div">
+                        <div id="other-div">
+                            <label for="other">Other (please specify)
+                                <span id="err-other" class="err">- Please specify</span>
+                            </label>
+                            <input type="text" name="other" id="other">
+                        </div>
+                    </div>
+                </div>
+
+                <div id="message-div">
+                    <label for="message">Message</label>
+                    <textarea name="message" id="message" rows="10"></textarea>
+                </div>
+
+
+                <div class="email-container">
+                    <div id="email-list">
+                        <label>
+                            <input type="checkbox" name="add_me" id="add-me"> Please add me to your mailing list
+                        </label>
+                    </div>
+
+                    <div id="email-type">
+                        <legend>Choose an email format:</legend>
+                        <label for="html">
+                            <input type="radio" name="method" id="html" value="html">HTML
+                        </label>
+
+                        <label for="text">
+                            <input type="radio" name="method" id="text" value="text">Text
+                        </label>
+                    </div>
+                </div>
+
+                <button type="submit" class="main-button" name="button" value="edit">Submit</button>
+
+            </form>
+        </main>
+    </div>
+
+</body>
+
+</html>

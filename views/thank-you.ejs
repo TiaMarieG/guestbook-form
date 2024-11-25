@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guest Info</title>
+</head>
+
+<body>
+    <h1>Thank you for your visit, <%= details.fName %>!</h1>
+
+    <h2>Here is what you wrote: </h2>
+    <p>Name: <%= details.fName %>
+            <%= details.lName %>
+    </p>
+    <p>Job Title: <%= details.job_title %>
+    </p>
+    <p>Company: <%= details.company %>
+    </p>
+    <p>LinkedIn: <%= details.linkedin_url %>
+    </p>
+    <p>Email: <%= details.email %>
+    </p>
+
+    <% if (details.meet != "other") { %>
+        <p>How we met: <%= details.meet %> </p>
+    <% } else { %>
+        <p>How we met: <%= details.other %></p>
+        <% } %>
+     
+    <p>Message: <%= details.message %>
+    </p>
+    
+    <% if (details.add_me == "on") { %>
+        <p>You signed up for our <%= details.method %>-based mailing list!</p>     
+    <% } %>
+</body>
+
+</html>

@@ -1,0 +1,151 @@
+* {
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    margin: auto;
+    width: 85%;
+}
+
+.container {
+    margin: auto;
+
+    display: grid;
+    grid-template-areas:
+        "header"
+        "main"
+}
+
+.header {
+    grid-area: header;
+    text-align: center;
+    font-size: 22px;
+}
+
+h1 {
+    margin-bottom: 1rem;
+}
+
+/* GENERIC INFO CUSTOMIZATION */
+
+#generic-info-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#generic-info-container input {
+    width: 99%;
+    padding: .3rem;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.user-info-div {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 33%;
+
+    padding-bottom: 2.5rem;
+}
+
+.user-info-div label input {
+    display: block;
+}
+
+/* MEETING INFO CUSTOMIZATION */
+
+#meeting-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+#meeting-container input {
+    width: 99%;
+    padding: .3rem;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+.meet-div {
+    flex-grow: 0;
+    flex-shrink: 0;
+    flex-basis: 50%;
+
+    padding-bottom: 2.5rem;
+}
+
+#other-div {
+    visibility: hidden;
+}
+
+select {
+    width: 99%;
+    padding: .25rem;
+    border-radius: 5px;
+    border: 1px solid black;
+}
+
+textarea {
+    width: 99.5%;
+}
+
+/* MAILING LIST CUSTOMIZATION */
+
+#add-me {
+    margin-left: 0;
+}
+
+.email-container {
+    padding-top: 1.5rem;
+}
+
+.email-container legend {
+    padding-top: 1rem;
+}
+
+#email-type {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-end;
+}
+
+/* BUTTON CUSTOMIZATION */
+
+.main-button {
+    margin-top: 1rem;
+    border: none;
+    background-color: green;
+    padding: .5rem .75rem;
+    border-radius: .25rem;
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+}
+
+/* TEXT CUSTOMIZATION */
+
+label {
+
+    font-weight: bolder;
+}
+
+legend {
+    font-weight: bolder;
+}
+
+/* ERROR MESSAGE */
+.err {
+    color: red;
+    display: none;
+}
+
+#email-type {
+    display: none;
+}

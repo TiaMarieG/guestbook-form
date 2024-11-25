@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Guest Summary</title>
+</head>
+<body>
+    <h1>Thank you for the visit!</h1>
+    <table border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>First Name</th>
+                <th>Last Name</th>
+                <th>Job Title</th>
+                <th>Company</th>
+                <th>LinkedIn URL</th>
+                <th>Email</th>
+                <th>How We Met</th>
+                <th>Other</th>
+                <th>Message</th>
+                <th>Mailing List</th>
+                <th>Mailing Type</th>
+                <th>Date Submitted</th>
+            </tr>
+        </thead>
+        <tbody>
+            <% guests.forEach(guests => { %>
+                <tr>
+                    <td><%= guests.id %></td>
+                    <td><%= guests.firstName %></td>
+                    <td><%= guests.lastName %></td>
+                    <td><%= guests.jobTitle %></td>
+                    <td><%= guests.company %></td>
+                    <td><%= guests.linkedInUrl %></td>
+                    <td><%= guests.email %></td>
+                    <td><%= guests.howDidMeet %></td>
+                    <td><%= guests.otherMeet %></td>
+                    <td><%= guests.message %></td>
+                    <td><%= guests.mailingList %></td>
+                    <td><%= guests.mailingType %></td>
+                    <td><%= guests.timestamp %></td>
+                </tr>
+            <% }); %>
+        </tbody>
+    </table>
+
+</body>
+</html>
